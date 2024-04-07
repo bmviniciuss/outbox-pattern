@@ -1,0 +1,10 @@
+{
+  "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+  "topic.prefix": "outbox",
+  "database.user": "postgres",
+  "database.dbname": "outbox",
+  "database.hostname": "postgres",
+  "database.password": "postgres",
+  "name": "pg-outbox",
+  "plugin.name": "pgoutput"
+}

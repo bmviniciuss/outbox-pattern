@@ -1,0 +1,9 @@
+CREATE SCHEMA IF NOT EXISTS outbox;
+
+CREATE TABLE IF NOT EXISTS outbox.messages (
+  id UUID PRIMARY KEY,
+  destination VARCHAR(255) NOT NULL,
+  event_type VARCHAR(255) NOT NULL,
+  payload JSONB NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
